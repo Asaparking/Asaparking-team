@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>A$APark</title>
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=5)">
+<link rel="stylesheet" href="styles2.css">
+<link rel="stylesheet" href="slicknac.css">
+<style type="text/css">
+#banner {
+	height: 49px;
+	width: 920px;
+}
+</style>
+</head>
+<body>
+
+<nav>
+ 	
+	 <a id="home" href="#homeSection">HOME</a>
+	 <a id="about" href="#aboutSection">ABOUT</a>
+	 <a id="news" href="#newsSection">NEWS</a>
+	 <a id="contact" href="#contactSection">VIDEO</a>
+	 <a id="lookbook" href="#lookbookSection">LOOKBOOK</a>
+
+</nav>
+
+
+
+<div id="homeSection" class="sect sectOne"></div>
+<div id="aboutSection" class="subSection1">
+	<h2>About this website</h2>
+    <div class="content">
+    <button class="accordion">What we do</button>
+        <div class="panel">
+          <p>The sharing economy has been listed as an important industrial by EU last year, and China also regards it as an important industrial development target. In Taipei, it’s really hard to find a parking space especially in rush hours. people who have unused space can rent it out, the same time people need parking spot can fine the parking space efficiently.</p>
+        </div>
+        
+        <button class="accordion">Company Value</button>
+        <div class="panel">
+          <p>We hope our product can help drivers find parking spaces more efficiently inthe busy Taipei area. Also, make the most effective use of those unused spaces, so that the idle space can becomes extra income. We hope this win-win model can make this society better. </p>
+        </div>
+</div>
+</div>
+	<div id="newsSection" class="sect sectTwo">
+		<div class="hover01 column">
+		<div>
+			<figure><img src="images/Balenciaga-Speed-Runner-1-300x200.jpg"/></figure>
+			<span>Balenciaga Goes Full Sock With Its New Speed Trainer</span>
+		</div>
+		<div>
+			<figure><img src="images/Kanye-West-Donald-Trump-Meeting-300x200.jpg" /></figure>
+			<span>Hover</span>
+		</div>
+		<div>
+			<figure><a herf="http://www.huhmagazine.co.uk/13391/supreme-thrasher-spring-2017-collection"><img src="images/Supreme-x-LV-Compr-300x200.jpg" /></a></figure>
+			<span>Hover</span>
+		</div>
+	</div>
+		
+		
+	</div>
+<div id="contactSection" class="subSection">
+<div align="center" class="video-container">
+  <iframe width="853" height="480" src="https://www.youtube.com/embed/vJAobv6NKEI" frameborder="0" allowfullscreen></iframe>
+</div>
+	
+</div>
+<div id="lookbookSection" class="sect sectThree">
+	<div id="pp1">
+		<b><a class="rick" href="RO.html" target="_blank">[Rick Owens]</a></b>
+		<b><a class="raf" href="raf.html" target="_blank">[Raf simon]</a></b>
+		<b><a class="balmain" href="balmain.html" target="_blank">[Balmian]</a></b>
+		<b><a class="balenciaga" href="#" target="_blank">[Balenciaga]</a></b>
+		<b><a class="fog" href="FOG.html" target="_blank">[Fear Of God]</a></b>
+		<b><a class="gucci" href="#" target="_blank">[Gucci]</a></b>
+		<b><a class="fendi" href="#" target="_blank">[Fendi]</a></b>
+		<p><p><b><a class="gosha" href="#" target="_blank">[Gosha Rubchinskiy]</a></b></p></p>
+		<b><a class="supreme" href="#" target="_blank">[Supreme]</a></b>
+		<b><a class="palace" href="#" target="_blank">[Palace]</a></b>
+		<b><a class="thrasher" href="#" target="_blank">[Thrasher]</a></b>
+		<b><a class="stussy" href="#" target="_blank">[Stussy]</a></b>
+		<b><a class="vlone" href="#" target="_blank">[VLone]</a></b>
+		<b><a class="ow" href="#" target="_blank">[Off White]</a></b>
+		<b><a class="bape" href="#" target="_blank">[BAPE]</a></b>
+
+	</div>
+	
+	
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+
+
+
+
+<script src="jquery-3.2.1.min.js"></script>
+<script src="js/app.js"></script>
+<script>
+	$(document).ready(function(){
+		setBindings();
+});
+
+function setBindings(){
+	$("nav a").click(function(e){
+		e.preventDefault();
+		var sectionID = e.currentTarget.id +"Section";
+		
+		$("html body").animate({
+			scrollTop: $("#" +sectionID).offset().top
+		}, 1000)
+	})
+}
+	</script>
+
+<script src="jquery-3.2.1.min.js"></script>
+	<script src="jquery.slicknav.js"></script>
+<script>
+		$(function(){
+			$('#menu').slicknav();
+		})
+	</script>
+
+</body>
+</html>
